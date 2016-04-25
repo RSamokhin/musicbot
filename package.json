@@ -1,0 +1,23 @@
+{
+  "name": "moosic_tg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSamokhin/musicbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSamokhin/musicbot/issues"
+  },
+  "homepage": "https://github.com/RSamokhin/musicbot#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "node-telegram-bot-api": "^0.21.1"
+  }
+}
