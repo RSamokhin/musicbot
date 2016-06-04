@@ -3,7 +3,26 @@ var TelegramBot = require('node-telegram-bot-api'),
     cheerio = require('cheerio'),
     request = require('request'),
     http = require('http');
-    fs = require('fs');
+    fs = require('fs'),
+    models = require('./models'),
+    db = require('./helpers/db'),
+    co = require('co');
+
+if (!module.parent) {
+    co(function * (){
+        try {
+            yield models.sequelize.authenticate();
+            models.sequelize.sync();
+            db.syncData();
+        } catch (e) {
+            console.log(e.message);
+            return;
+        }
+    });
+}
+
+
+
 
 
 
@@ -16,7 +35,6 @@ tokens.forEach(function (t) {
         sendFile(bot, msg);
     });
 });
-
 
 
 function sendFile (bot, msg) {

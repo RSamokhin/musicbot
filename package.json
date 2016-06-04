@@ -18,6 +18,9 @@
   "homepage": "https://github.com/RSamokhin/musicbot#readme",
   "dependencies": {
     "cheerio": "^0.20.0",
-    "node-telegram-bot-api": "^0.21.1"
+    "co": "^4.6.0",
+    "node-telegram-bot-api": "^0.21.1",
+    "pg": "^4.5.6",
+    "sequelize": "^3.23.3"
   }
 }
